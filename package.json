@@ -18,7 +18,8 @@
     "test:unit-coverage": "vitest run --coverage",
     "typecheck": "vue-tsc --noEmit",
     "quality": "pnpm run lint && pnpm run typecheck && vitest run && pnpm run build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "start": "node server.js"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
