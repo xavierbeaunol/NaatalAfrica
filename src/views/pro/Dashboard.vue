@@ -32,7 +32,7 @@ const dashboardLinks = [
     title: 'planifier une tournée',
     description: 'Planifiez une tournée de collecte',
     icon: '/icons/plan.svg',
-    route: '/pro/plan',
+    route: '/pro/planification',
   },
 
   {
