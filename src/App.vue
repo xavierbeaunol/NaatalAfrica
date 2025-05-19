@@ -1,14 +1,17 @@
 <template>
-  <component :is="layout">
+  <component :is="layoutComponent">
     <RouterView />
   </component>
 </template>
 
 <script setup lang="ts">
-import '@/css/app.css'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import ProLayout from '@/layouts/ProLayout.vue'
+import PublicLayout from '@/layouts/PublicLayout.vue'
 
 const route = useRoute()
-const layout = computed(() => `layout-${route.meta.layout || 'default'}`)
+const layoutComponent = computed(() => {
+  return route.meta.layout === 'pro' ? ProLayout : PublicLayout
+})
 </script>

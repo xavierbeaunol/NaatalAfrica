@@ -16,8 +16,10 @@ const transformHtmlPlugin = (data: Record<string, string>): Plugin => ({
 })
 
 export default defineConfig({
+  base: '/',
   plugins: [
     vue(),
+
     tailwindcss(),
     transformHtmlPlugin({
       title: 'ProjectName',
